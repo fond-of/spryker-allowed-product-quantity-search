@@ -47,7 +47,7 @@ class AllowedQuantityProductPageDataExpanderPlugin extends AbstractPlugin implem
         $allowedProductQuantityTransfer = $allowedProductQuantityResponseTransfer->getAllowedProductQuantityTransfer();
 
         if ($allowedProductQuantityTransfer === null) {
-            return;
+            $allowedProductQuantityTransfer = new AllowedProductQuantityTransfer();
         }
 
         $productAbstractPageSearchTransfer->setAllowedQuantity(

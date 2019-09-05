@@ -10,6 +10,7 @@ interface AllowedProductQuantitySearchWriterInterface
      * @return void
      */
     public function publish(array $allowedProductQuantityIds);
+
     /**
      * @param array $allowedProductQuantityIds
      *
