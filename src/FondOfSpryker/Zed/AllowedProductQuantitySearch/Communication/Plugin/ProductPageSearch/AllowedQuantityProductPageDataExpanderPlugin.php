@@ -63,14 +63,14 @@ class AllowedQuantityProductPageDataExpanderPlugin extends AbstractPlugin implem
     protected function mapAllowedProductQuantityTransferToAllowedQuantityArray(
         AllowedProductQuantityTransfer $allowedProductQuantityTransfer
     ): array {
-        $allowedQuantityArray = $allowedProductQuantityTransfer->toArray();
+        $allowedQuantityArray = $allowedProductQuantityTransfer->toArray(true, true);
 
-        if (array_key_exists('id_allowed_product_quantity', $allowedQuantityArray)) {
-            unset($allowedQuantityArray['id_allowed_product_quantity']);
+        if (array_key_exists('idAllowedProductQuantity', $allowedQuantityArray)) {
+            unset($allowedQuantityArray['idAllowedProductQuantity']);
         }
 
-        if (array_key_exists('id_product_abstract', $allowedQuantityArray)) {
-            unset($allowedQuantityArray['id_product_abstract']);
+        if (array_key_exists('idProductAbstract', $allowedQuantityArray)) {
+            unset($allowedQuantityArray['idProductAbstract']);
         }
 
         return $allowedQuantityArray;
