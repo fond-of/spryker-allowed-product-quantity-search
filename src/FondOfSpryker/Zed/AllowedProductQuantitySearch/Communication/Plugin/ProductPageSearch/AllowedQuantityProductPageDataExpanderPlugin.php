@@ -40,10 +40,6 @@ class AllowedQuantityProductPageDataExpanderPlugin extends AbstractPlugin implem
          $allowedProductQuantityResponseTransfer = $this->getFactory()->getAllowedProductQuantityFacade()
             ->findProductAbstractAllowedQuantity($productAbstractTransfer);
 
-        if ($allowedProductQuantityResponseTransfer->getIsSuccessful() === false) {
-            return;
-        }
-
         $allowedProductQuantityTransfer = $allowedProductQuantityResponseTransfer->getAllowedProductQuantityTransfer();
 
         if ($allowedProductQuantityTransfer === null) {
