@@ -2,6 +2,8 @@
 
 namespace FondOfSpryker\Zed\AllowedProductQuantitySearch\Dependency\Facade;
 
+use Spryker\Zed\EventBehavior\Business\EventBehaviorFacadeInterface;
+
 class AllowedProductQuantitySearchToEventBehaviorFacadeBridge implements AllowedProductQuantitySearchToEventBehaviorFacadeInterface
 {
     /**
@@ -12,7 +14,7 @@ class AllowedProductQuantitySearchToEventBehaviorFacadeBridge implements Allowed
     /**
      * @param \Spryker\Zed\EventBehavior\Business\EventBehaviorFacadeInterface $eventBehaviorFacade
      */
-    public function __construct($eventBehaviorFacade)
+    public function __construct(EventBehaviorFacadeInterface $eventBehaviorFacade)
     {
         $this->eventBehaviorFacade = $eventBehaviorFacade;
     }
