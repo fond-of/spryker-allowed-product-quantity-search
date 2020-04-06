@@ -4,8 +4,12 @@ namespace FondOfSpryker\Zed\AllowedProductQuantitySearch\Business;
 
 use FondOfSpryker\Zed\AllowedProductQuantitySearch\Business\Model\AllowedProductQuantitySearchWriter;
 use FondOfSpryker\Zed\AllowedProductQuantitySearch\Business\Model\AllowedProductQuantitySearchWriterInterface;
+use Spryker\Zed\Kernel\Business\AbstractBusinessFactory;
 
-class AllowedProductQuantitySearchBusinessFactory
+/**
+ * @method \FondOfSpryker\Zed\AllowedProductQuantitySearch\AllowedProductQuantitySearchConfig getConfig()
+ */
+class AllowedProductQuantitySearchBusinessFactory extends AbstractBusinessFactory
 {
     /**
      * @return \FondOfSpryker\Zed\AllowedProductQuantitySearch\Business\Model\AllowedProductQuantitySearchWriterInterface

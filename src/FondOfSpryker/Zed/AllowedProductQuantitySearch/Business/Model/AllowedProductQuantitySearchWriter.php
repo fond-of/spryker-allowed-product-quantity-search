@@ -9,7 +9,7 @@ class AllowedProductQuantitySearchWriter implements AllowedProductQuantitySearch
      *
      * @return void
      */
-    public function publish(array $allowedProductQuantityIds)
+    public function publish(array $allowedProductQuantityIds): void
     {
     }
 
@@ -18,7 +18,7 @@ class AllowedProductQuantitySearchWriter implements AllowedProductQuantitySearch
      *
      * @return void
      */
-    public function unpublish(array $allowedProductQuantityIds)
+    public function unpublish(array $allowedProductQuantityIds): void
     {
     }
 }
