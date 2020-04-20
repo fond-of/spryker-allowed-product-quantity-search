@@ -1,0 +1,35 @@
+<?php
+
+namespace FondOfSpryker\Zed\AllowedProductQuantitySearch\Communication\Plugin\ProductPageSearchExtension;
+
+use Generated\Shared\Transfer\LocaleTransfer;
+use Generated\Shared\Transfer\PageMapTransfer;
+use Spryker\Zed\Kernel\Communication\AbstractPlugin;
+use Spryker\Zed\ProductPageSearchExtension\Dependency\PageMapBuilderInterface as SprykerPageMapBuilderInterface;
+use Spryker\Zed\ProductPageSearchExtension\Dependency\Plugin\ProductAbstractMapExpanderPluginInterface;
+
+/**
+ * @method \FondOfSpryker\Zed\AllowedProductQuantitySearch\Communication\AllowedProductQuantitySearchCommunicationFactory getFactory()
+ * @method \FondOfSpryker\Zed\AllowedProductQuantitySearch\AllowedProductQuantitySearchConfig getConfig()
+ * @method \FondOfSpryker\Zed\AllowedProductQuantitySearch\Business\AllowedProductQuantitySearchFacadeInterface getFacade()
+ */
+class AllowedQuantityProductPageMapExpanderPlugin extends AbstractPlugin implements ProductAbstractMapExpanderPluginInterface
+{
+    /**
+     * @param \Generated\Shared\Transfer\PageMapTransfer $pageMapTransfer
+     * @param \Spryker\Zed\ProductPageSearchExtension\Dependency\PageMapBuilderInterface $pageMapBuilder
+     * @param array $productData
+     * @param \Generated\Shared\Transfer\LocaleTransfer $localeTransfer
+     *
+     * @return void
+     */
+    public function expandProductMap(
+        PageMapTransfer $pageMapTransfer,
+        SprykerPageMapBuilderInterface $pageMapBuilder,
+        array $productData,
+        LocaleTransfer $localeTransfer
+    ): void {
+        $allowedQuantity = $productData['allowed_quantity'];
+        $pageMapBuilder->addSearchResultData($pageMapTransfer, 'allowed_quantity', $allowedQuantity);
+    }
+}

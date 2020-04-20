@@ -12,6 +12,7 @@
     "php": ">=7.1",
     "spryker/event": "^1.0.0 || ^2.0.0",
     "spryker/product-page-search": "^1.0.0 || ^2.0.0 || ^3.0.0",
+    "spryker/product-page-search-extension": "^1.2.0",
     "fond-of-spryker/allowed-product-quantity": "dev-master"
   },
   "require-dev": {
