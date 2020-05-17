@@ -18,14 +18,14 @@ class AllowedProductQuantitySearchListener extends AbstractPlugin implements Eve
     use DatabaseTransactionHandlerTrait;
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
+     *
+     * @api
      *
      * @param \Spryker\Shared\Kernel\Transfer\TransferInterface[] $transfers
      * @param string $eventName
      *
      * @return void
-     * @throws
-     * @api
      */
     public function handleBulk(array $transfers, $eventName): void
     {

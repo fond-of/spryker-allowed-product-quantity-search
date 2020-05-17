@@ -10,11 +10,15 @@ use Spryker\Zed\Search\Business\Model\Elasticsearch\DataMapper\PageMapBuilderInt
 
 /**
  * @method \FondOfSpryker\Zed\AllowedProductQuantitySearch\Communication\AllowedProductQuantitySearchCommunicationFactory getFactory()
+ * @method \FondOfSpryker\Zed\AllowedProductQuantitySearch\AllowedProductQuantitySearchConfig getConfig()
+ * @method \FondOfSpryker\Zed\AllowedProductQuantitySearch\Business\AllowedProductQuantitySearchFacadeInterface getFacade()
  */
 class AllowedQuantityProductPageMapExpanderPlugin extends AbstractPlugin implements ProductPageMapExpanderInterface
 {
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
+     *
+     * @api
      *
      * @param \Generated\Shared\Transfer\PageMapTransfer $pageMapTransfer
      * @param \Spryker\Zed\Search\Business\Model\Elasticsearch\DataMapper\PageMapBuilderInterface $pageMapBuilder
@@ -22,8 +26,6 @@ class AllowedQuantityProductPageMapExpanderPlugin extends AbstractPlugin impleme
      * @param \Generated\Shared\Transfer\LocaleTransfer $localeTransfer
      *
      * @return \Generated\Shared\Transfer\PageMapTransfer
-     * @api
-     *
      */
     public function expandProductPageMap(
         PageMapTransfer $pageMapTransfer,

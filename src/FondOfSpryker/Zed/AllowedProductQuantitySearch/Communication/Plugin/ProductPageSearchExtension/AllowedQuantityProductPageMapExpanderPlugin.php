@@ -21,15 +21,18 @@ class AllowedQuantityProductPageMapExpanderPlugin extends AbstractPlugin impleme
      * @param array $productData
      * @param \Generated\Shared\Transfer\LocaleTransfer $localeTransfer
      *
-     * @return void
+     * @return \Generated\Shared\Transfer\PageMapTransfer
      */
     public function expandProductMap(
         PageMapTransfer $pageMapTransfer,
         SprykerPageMapBuilderInterface $pageMapBuilder,
         array $productData,
         LocaleTransfer $localeTransfer
-    ): void {
+    ): PageMapTransfer {
         $allowedQuantity = $productData['allowed_quantity'];
+
         $pageMapBuilder->addSearchResultData($pageMapTransfer, 'allowed_quantity', $allowedQuantity);
+
+        return $pageMapTransfer;
     }
 }

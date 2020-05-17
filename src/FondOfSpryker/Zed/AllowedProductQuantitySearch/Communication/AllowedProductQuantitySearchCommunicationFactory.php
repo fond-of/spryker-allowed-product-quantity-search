@@ -15,8 +15,6 @@ use Spryker\Zed\Kernel\Communication\AbstractCommunicationFactory;
 class AllowedProductQuantitySearchCommunicationFactory extends AbstractCommunicationFactory
 {
     /**
-     * @throws
-     *
      * @return \FondOfSpryker\Zed\AllowedProductQuantitySearch\Dependency\Facade\AllowedProductQuantitySearchToAllowedProductQuantityFacadeInterface
      */
     public function getAllowedProductQuantityFacade(): AllowedProductQuantitySearchToAllowedProductQuantityFacadeInterface
@@ -25,8 +23,6 @@ class AllowedProductQuantitySearchCommunicationFactory extends AbstractCommunica
     }
 
     /**
-     * @throws
-     *
      * @return \FondOfSpryker\Zed\AllowedProductQuantitySearch\Dependency\Facade\AllowedProductQuantitySearchToEventBehaviorFacadeInterface
      */
     public function getEventBehaviorFacade(): AllowedProductQuantitySearchToEventBehaviorFacadeInterface
@@ -35,8 +31,6 @@ class AllowedProductQuantitySearchCommunicationFactory extends AbstractCommunica
     }
 
     /**
-     * @throws
-     *
      * @return \FondOfSpryker\Zed\AllowedProductQuantitySearch\Dependency\Facade\AllowedProductQuantitySearchToProductPageSearchFacadeInterface
      */
     public function getProductPageSearchFacade(): AllowedProductQuantitySearchToProductPageSearchFacadeInterface
