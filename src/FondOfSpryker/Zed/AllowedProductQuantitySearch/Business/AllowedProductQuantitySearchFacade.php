@@ -10,13 +10,13 @@ use Spryker\Zed\Kernel\Business\AbstractFacade;
 class AllowedProductQuantitySearchFacade extends AbstractFacade implements AllowedProductQuantitySearchFacadeInterface
 {
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
+     *
+     * @api
      *
      * @param array $allowedProductQuantityIds
      *
      * @return void
-     * @api
-     *
      */
     public function publish(array $allowedProductQuantityIds): void
     {
@@ -24,13 +24,13 @@ class AllowedProductQuantitySearchFacade extends AbstractFacade implements Allow
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
+     *
+     * @api
      *
      * @param array $allowedProductQuantityIds
      *
      * @return void
-     * @api
-     *
      */
     public function unpublish(array $allowedProductQuantityIds): void
     {
